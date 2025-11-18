@@ -4,105 +4,215 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carte Blanche | Cuisine Méditerranéenne</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Lien vers le CSS -->
+
+  <!-- Lien CSS -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- Icônes Font Awesome -->
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar">
-    <img src="image/logo.PNG" alt="Logo Carte Blanche" class="logo" />
+    <img src="image/logo.jpg" alt="Logo Carte Blanche" class="logo" />
     <ul class="nav-links">
       <li><a href="#menu">Menu</a></li>
       <li><a href="#apropos">À propos</a></li>
       <li><a href="#services">Nos Services</a></li>
-      <li><a href="#commander">Commander</a></li>
+      <li><a href="#commander">Commander</a></li> 
+    
+      <li><a href="#reservation">Réserver</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- ===== HERO ===== -->
-<!-- IMAGE D'ACCUEIL (bannière principale) -->
-<header class="hero" style="background-image: url('image/1.jpeg');">
+  <header class="hero" style="background-image: url('image/1.JPG');">
     <div class="hero-content">
       <h1>Carte Blanche</h1>
       <p class="slogan">Cuisine Méditerranéenne • Fraîche & Authentique</p>
-      <a href="#commander" class="btn-primary">Commander maintenant</a>
+      <a href="#menu" class="btn-primary">Découvrir le Menu</a>
     </div>
   </header>
 
   <!-- ===== MENU ===== -->
   <section id="menu" class="menu">
     <h2>Nos Spécialités Méditerranéennes</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="image/PLAT PRINCIPAL.jpeg" alt="Filet de dorade à la provençale" />
-        <h3>pate</h3>
-        <p>pates frais au fromage</p>
-      </div>
 
-      <div class="menu-item">
-        <img src="image/truff.jpeg" alt="Tagliatelles à la truffe" />
-        <h3>Tagliatelles à la truffe</h3>
-        <p>Pâtes fraîches maison à la crème et copeaux de truffe.</p>
-      </div>
+    <!-- Boutons de catégories -->
+    <div class="menu-categories">
+      <button class="menu-btn active" data-target="entrees">Entrées</button>
+      <button class="menu-btn" data-target="plats">Plats</button>
+      <button class="menu-btn" data-target="pizzas">Pizzas</button>
+      <button class="menu-btn" data-target="mocktails">Mocktails</button>
+      <button class="menu-btn" data-target="desserts">Desserts</button>
+    </div>
 
+    <!-- Entrées -->
+    <div id="entrees" class="menu-grid">
       <div class="menu-item">
-        <img src="image/citron.jpeg" alt="Mocktail Citron Basilic" />
-        <h3>Mocktail Citron Basilic</h3>
-        <p>Sans alcool, rafraîchissant et plein de saveurs.</p>
-      </div>
+    
+        <h3>Arancini aub parmesan</h3>
+        <p>creme de permesan affine 12 mois</p>
+        <p class="prix">8 €</p>
 
-      <div class="menu-item">
-        <img src="image/SALADE.jpeg" alt="Salade Méditerranéenne" />
-        <h3>Salade Méditerranéenne</h3>
-        <p>Tomates cerises, olives, feta et vinaigrette maison.</p>
-      </div>
+         <h3>Veloute de butternut roti </h3>
+        <p>eclats de noisettes torrefiees</p>
+        <p class="prix">8 €</p> 
 
-      <div class="menu-item">
-        <img src="image/cc.jpeg" alt="Risotto au citron" />
-        <h3>Risotto au citron</h3>
-        <p>Crème légère, zeste de citron et parmesan frais.</p>
-      </div>
+         <h3>L'oeuf parfait</h3>
+        <p>creme de champignons</p>
+        <p class="prix">8 €</p>
 
-      <div class="menu-item">
-        <img src="image/cocktail.jpeg" alt="Mocktail Fruits Rouges" />
-        <h3>Mocktail Fruits Rouges</h3>
-        <p>Douceur fruitée, parfaite pour accompagner vos repas.</p>
+         <h3>Poelee de seiche</h3>
+        <p>seiche sautees a la persillade</p>
+        <p class="prix">12 €</p>
       </div>
+      
+    </div>
+
+    <!-- Plats -->
+    <div id="plats" class="menu-grid hidden">
+      <div class="menu-item">
+      
+        <h3>Supreme de volaille fermier</h3>
+        <p>farci aux champignons, risotto au petit epeautre</p>
+        <p class="prix">21 €</p>
+
+        <h3>Paleron de boeuf confit 7h</h3>
+        <p> mousseline de pomme de terre et legumes de saison, jus au thym</p>
+        <p class="prix">23 €</p>
+
+        <h3>Selle d'agneau roti</h3>
+        <p>tomates sechees, pousses d'epinards, pignons de pin, polenta cremeuse, jus corse</p>
+        <p class="prix">24 €</p>
+      </div>
+      <div class="menu-item">
+       
+        <h3>La truite</h3>
+        <p>mousseline de panais, legumes de saison, beurre blanc et huile d'herbes</p>
+           <p class="prix">22 €</p>
+
+           <h3>L'arrivage du moment </h3>
+        <p>filet de poisson snacke a la plancha, ecrase de pommes de terre, wok du moment, vierge de legumes</p>
+           <p class="prix">22 €</p>
+
+           <h3>Risotto gambas</h3>
+        <p>bisque de gambas, gambas snackees a la plancha.</p>
+           <p class="prix">21 €</p>
+
+           <h3>Linguines aux palourdes</h3>
+        <p>tomates cerises, persil, ail frais et jus de coquillage</p>
+           <p class="prix">18,90 €</p>
+      </div>
+    </div>
+
+    <!-- Pizzas -->
+    <div id="pizzas" class="menu-grid hidden">
+      <div class="menu-item">
+       
+        <h3> Black</h3>
+        <p>sauce pesto, courgettes, tomates cerises, salade, tomates séchées, fromage burrata, olives. </p>
+            <p class="prix">18 €</p>
+            
+ <h3> Ricotta</h3>
+        <p>crème fraîche, mozzarella, ricotta, olives.</p>
+            <p class="prix">16 €</p>
+
+             <h3> Napolitain</h3>
+        <p>sauce tomate, mozzarella, anchois, basilic.</p>
+            <p class="prix">12 €</p>
+
+             <h3> Burrata</h3>
+        <p>sauce tomate, tomates cerises, salade, burrata, sauce pesto, fromage, olives.</p>
+            <p class="prix">15 €</p>
+
+             <h3>Thon </h3>
+        <p>sauce tomate, fromage emmental, thon confit à l’huile d’olive, oignons rouges, olives.</p>
+            <p class="prix">13,99 €</p>
+
+             <h3>4 Fromages</h3>
+        <p>sauce tomate, mozzarella, 3 fromages du moment.</p>
+            <p class="prix"></p>
+
+        
+      </div>
+      
+    </div>
+
+    <!-- Mocktails -->
+    <div id="mocktails" class="menu-grid hidden">
+      <div class="menu-item">
+        <!-- <img src="image/cocktail.jpeg" alt="Mocktail Fruits Rouges" /> -->
+        <h3>Tropicool</h3>
+        <p>Passion, orange, orgeat et citron</p>
+        <p class="prix">6 €</p>
+
+         <h3>Frambulles</h3>
+        <p>Framboise, passion, citron et Perrier</p>
+        <p class="prix">6,5 € €</p>
+
+         <h3>Sunnypac</h3>
+        <p>Orange, abricot & sirop de pac</p>
+        <p class="prix">6 €</p>
+
+         <h3>Virgin Mojito</h3>
+        <p>Menthe fraîche, citron vert, rhum 0,0 %, Perrier</p>
+        <p class="prix">7 €</p>
+
+         <h3>Virgin Basilic Smash</h3>
+        <p>Basilic frais, citron, sucre et gin 0 %</p>
+        <p class="prix">7 €</p>
+
+
+         <h3>Sirop</h3>
+        <p>Menthe – Orgeat – Pac – Pêche – Grenadine</p>
+        <p class="prix">2 €</p>
+
+      </div>
+      
+    </div>
+
+    <!-- Desserts -->
+    <div id="desserts" class="menu-grid hidden">
+      <div class="menu-item">
+      
+        <h3>Poire pochée aux épices</h3>
+        <p>crème vanille de Madagascar</p>
+         <p class="prix">8 €</p>
+
+        <h3>Le baba fait maison </h3>
+        <p>crème onctueuse et soupe d’orange parfumée aux épices.</p>
+         <p class="prix">8 €</p>
+
+        <h3>Pain perdu</h3>
+        <p>crème de spéculoos</p>
+         <p class="prix">8 €</p>
+
+        <h3>Tiramisu pistache</h3>
+        <p>pistache</p>
+         <p class="prix">8 €</p>
+      </div>
+     
     </div>
   </section>
 
   <!-- ===== À PROPOS ===== -->
   <section id="apropos" class="apropos">
-  
-
     <div class="apropos-content">
       <div class="apropos-text">
         <h2>À propos de Carte Blanche</h2>
-        <p>
-          Chez <strong>Carte Blanche</strong>, nous croyons que la cuisine est une histoire de partage, de passion et de soleil.
-          Inspirés par les saveurs du sud de la France et de l’Italie, nous préparons chaque plat avec des ingrédients frais,
-          de saison et sélectionnés avec soin.
-        </p>
-        <p>
-          Notre chef, amoureux de la cuisine méditerranéenne, vous invite à un voyage culinaire entre
-          la Provence, la Toscane et la Côte Amalfitaine — sans quitter marseille !
-        </p>
-        <p>
-          Que ce soit pour un repas à emporter, une livraison ou un dîner sur place, 
-          <em>Carte Blanche</em> vous promet une expérience chaleureuse, moderne et savoureuse.
-        </p>
+        <p>Chez <strong>Carte Blanche</strong>, nous croyons que la cuisine est une histoire de partage, de passion et de soleil.</p>
+        <p>Inspirés par les saveurs du sud, nous préparons chaque plat avec des ingrédients frais et locaux.</p>
       </div>
       <div class="apropos-image">
-        <img src="image/1.jpeg" alt="Photo du restaurant Carte Blanche" />
+        <img src="image/2.JPG" alt="Restaurant Carte Blanche" />
       </div>
     </div>
   </section>
@@ -113,23 +223,21 @@
     <div class="service-grid">
       <div class="service-item">
         <img src="image/liv.jpeg" alt="Livraison à domicile" />
-        <h3>🚗 Livraison à Domicile</h3>
-        <p>Profitez de nos plats chez vous, livrés rapidement et avec soin.</p>
+        <h3>🚗 Livraison</h3>
+        <p>Recevez vos plats à la maison rapidement.</p>
       </div>
-
       <div class="service-item">
-        <img src="image/salle.jpeg" alt="À emporter" />
+        <img src="image/5.JPG" alt="À emporter" />
         <h3>🥡 À Emporter</h3>
-        <p>Commandez en ligne et venez récupérer votre repas au restaurant.</p>
+        <p>Commandez en ligne et venez récupérer votre commande.</p>
       </div>
     </div>
   </section>
 
   <!-- ===== COMMANDER ===== -->
+ <!-- <p>
   <section id="commander" class="order">
     <h2>Commandez en Ligne</h2>
-    <p>Choisissez votre mode de commande : livraison ou à emporter.</p>
-
     <form class="order-form">
       <input type="text" placeholder="Votre nom" required />
       <input type="tel" placeholder="Téléphone" required />
@@ -143,30 +251,57 @@
       </select>
 
       <textarea placeholder="Votre commande (plats, quantité...)" required></textarea>
-      <button type="submit" class="btn-primary">Envoyer la commande</button>
+      <button type="submit" class="btn-primary">Envoyer</button>
     </form>
-  </section>
+  </section>  </p> -->
+
+<!-- ===== RÉSERVATION ===== -->
+  <!--<section id="reservation" class="reservation">
+    <h2>Réservez votre Table</h2>
+    <form class="reservation-form">
+      <input type="text" name="nom" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre email" required />
+      <input type="tel" name="telephone" placeholder="Téléphone" required />
+    
+      <input type="time" name="heure" required />
+      <textarea name="message" placeholder="Message (facultatif)"></textarea>
+      <button type="submit" class="btn-primary">Envoyer la réservation</button>
+    </form>
+  </section>. -->
+
+  <!-- ===== POPUP ===== -->
+  <div class="popup">
+    <div class="popup-content">
+      <h3>✅ Réservation envoyée avec succès !</h3>
+      <p>Nous vous contacterons très bientôt.</p>
+      <button class="btn-primary close-popup">Fermer</button>
+    </div>
+  </div>
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact" class="contact">
-    <h2>Contact & Informations</h2>
-    <div class="contact-info">
-      <p><strong>Adresse :</strong> 25 Rue de la Méditerranée, 75007 marseille</p>
-      <p><strong>Téléphone :</strong> <a href="tel:+33123456789">01 23 45 67 89</a></p>
-      <p><strong>Email :</strong> <a href="mailto:contact@carteblanche.fr">contact@carteblanche.fr</a></p>
-      <p><strong>Horaires :</strong> Lundi - Samedi : 11h30 - 22h00</p>
-    </div>
+ <section id="contact" class="contact"> <h2>Contact & Informations</h2> 
+<div class="contact-info">
+  <p>
+    <strong>Adresse :</strong>
+    <a href="https://www.google.com/maps?q=91+Rue+de+la+République,+13002+Marseille" target="_blank">
+      91 Rue de la République, 13002 Marseille
+    </a>
+  </p>
+</div>
 
-    <div class="socials">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-tiktok"></i></a>
-    </div>
-  </section>
+    <p><strong>Téléphone :</strong> 
+      <a href="tel:+33769016878">04 91 52 74 80</a></p> 
+     
+      <p><strong>Email :</strong> <a href="mailto:contact@carteblanche.fr">restaurant@crtblanche.com</a></p> 
+      <p><strong>Horaires :</strong> Lundi - Dimanche : 08h00 - 23h00</p> </div> 
+      <div class="socials"> <a href="#"><i class="fab fa-facebook"></i></a> 
+        <a href="https://www.instagram.com/carteblanche_marseille/"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-tiktok"></i></a> 
+        </div> 
+      </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; 2025 Carte Blanche | Cuisine Méditerranéenne | Tous droits réservés</p>
+    <p>&copy; 2025 Carte Blanche | Tous droits réservés</p>
   </footer>
 
   <script src="script.js"></script>
