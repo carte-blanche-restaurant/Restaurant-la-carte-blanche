@@ -255,19 +255,40 @@
     </form>
   </section>  </p> -->
 
-<!-- ===== RÉSERVATION ===== -->
-  <!--<section id="reservation" class="reservation">
-    <h2>Réservez votre Table</h2>
-    <form class="reservation-form">
-      <input type="text" name="nom" placeholder="Votre nom" required />
-      <input type="email" name="email" placeholder="Votre email" required />
-      <input type="tel" name="telephone" placeholder="Téléphone" required />
+  <!-- ===== RESERVATION ===== -->
+<section id="reservation" class="reservation">
+  <h2>Réservez votre Table</h2>
+
+  <form class="reservation-form" action="https://formspree.io/f/xgvqellw" method="POST">
+
     
-      <input type="time" name="heure" required />
-      <textarea name="message" placeholder="Message (facultatif)"></textarea>
-      <button type="submit" class="btn-primary">Envoyer la réservation</button>
-    </form>
-  </section>. -->
+    <input type="text" name="nom" placeholder="Votre nom" required />
+    <input type="tel" name="telephone" placeholder="Téléphone" required />
+    <input type="email" name="email" placeholder="Votre email" required />
+
+    <select name="personnes" required>
+      <option value="">Nombre de personnes</option>
+      <option>1 personne</option>
+      <option>2 personnes</option>
+      <option>3 personnes</option>
+      <option>4 personnes</option>
+      <option>5 personnes</option>
+      <option>6 personnes</option>
+      <option>7 personnes</option>
+      <option>8 personnes</option>
+    </select>
+
+    <input type="date" name="date" required />
+    <input type="time" name="heure" required />
+
+    <textarea name="message" placeholder="Message (facultatif)"></textarea>
+
+    <button type="submit" class="btn-primary">Envoyer la réservation</button>
+
+  </form>
+</section>
+
+ 
 
   <!-- ===== POPUP ===== -->
   <div class="popup">
