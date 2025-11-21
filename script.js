@@ -36,7 +36,7 @@ document.querySelector(".order-form").addEventListener("submit", function (e) {
 });
 
 // === FORMULAIRE DE RÉSERVATION ===
-// Pour envoyer un email, on utilise Formspree (https://formspree.io)
+// === FORMULAIRE DE RÉSERVATION ===
 const reservationForm = document.querySelector(".reservation-form");
 const popup = document.querySelector(".popup");
 const closePopup = document.querySelector(".close-popup");
@@ -44,16 +44,43 @@ const closePopup = document.querySelector(".close-popup");
 reservationForm.addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  // 🔹 Envoi du formulaire avec Formspree
   const formData = new FormData(reservationForm);
 
+  // Message structuré pour ton email
+  formData.append("_subject", "📩 Nouvelle réservation");
+  formData.append("_format", "plain");
+
+  const nom = formData.get("nom");
+  const email = formData.get("email");
+  const telephone = formData.get("telephone");
+  const personnes = formData.get("personnes");
+  const date = formData.get("date");
+  const heure = formData.get("heure");
+  const message = formData.get("message") || "Aucun message";
+
+  const texteEmail = `
+Nouvelle réservation :
+
+👤 Nom : ${nom}
+📞 Téléphone : ${telephone}
+📧 Email : ${email}
+
+👥 Nombre de personnes : ${personnes}
+📅 Date : ${date}
+⏰ Heure : ${heure}
+
+💬 Message :
+${message}
+  `;
+
+  formData.append("message-format", texteEmail);
+  formData.append("_replyto", email); // envoi du mail de confirmation au client
+
   try {
-    const response = await fetch("https://formspree.io/f/xnnokyzd", {
+    const response = await fetch("https://formspree.io/f/xgvqellw", {
       method: "POST",
       body: formData,
-      headers: {
-        Accept: "application/json",
-      },
+      headers: { Accept: "application/json" }
     });
 
     if (response.ok) {
