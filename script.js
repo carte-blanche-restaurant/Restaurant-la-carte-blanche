@@ -1,42 +1,23 @@
-// === MENU DYNAMIQUE ===
+// ===== MENU DYNAMIQUE ===== 
+// ===== CACHER LE POPUP AU CHARGEMENT =====
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.querySelector(".popup");
+  if (popup) popup.style.display = "none";
+});
+
 const menuButtons = document.querySelectorAll(".menu-btn");
 const menuSections = document.querySelectorAll(".menu-grid");
 
 menuButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    // Retirer la classe active de tous les boutons
-    menuButtons.forEach((b) => b.classList.remove("active"));
+    menuButtons.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
-
-    // Masquer toutes les sections de plats
-    menuSections.forEach((section) => section.classList.add("hidden"));
-
-    // Afficher la bonne catégorie
-    const target = btn.getAttribute("data-target");
-    document.getElementById(target).classList.remove("hidden");
+    menuSections.forEach(sec => sec.classList.add("hidden"));
+    document.getElementById(btn.getAttribute("data-target")).classList.remove("hidden");
   });
 });
 
-// === FORMULAIRE DE COMMANDE ===
-document.querySelector(".order-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const service = document.querySelector("#service").value;
-  const name = this.querySelector("input[type='text']").value;
-
-  if (service === "livraison") {
-    alert(`Merci ${name} ! Votre commande sera livrée sous peu 🚗`);
-  } else if (service === "emporter") {
-    alert(`Merci ${name} ! Votre commande sera prête à être récupérée 🥡`);
-  } else {
-    alert("Merci pour votre commande !");
-  }
-
-  this.reset();
-});
-
-// === FORMULAIRE DE RÉSERVATION ===
-// === FORMULAIRE DE RÉSERVATION ===
+// ===== FORMULAIRE DE RÉSERVATION =====
 const reservationForm = document.querySelector(".reservation-form");
 const popup = document.querySelector(".popup");
 const closePopup = document.querySelector(".close-popup");
@@ -46,10 +27,6 @@ reservationForm.addEventListener("submit", async function (e) {
 
   const formData = new FormData(reservationForm);
 
-  // Message structuré pour ton email
-  formData.append("_subject", "📩 Nouvelle réservation");
-  formData.append("_format", "plain");
-
   const nom = formData.get("nom");
   const email = formData.get("email");
   const telephone = formData.get("telephone");
@@ -58,7 +35,21 @@ reservationForm.addEventListener("submit", async function (e) {
   const heure = formData.get("heure");
   const message = formData.get("message") || "Aucun message";
 
-  const texteEmail = `
+  // ==== Email client simple ====
+  const emailClient = `
+Bonjour ${nom},
+
+Votre réservation au restaurant Carte Blanche a été confirmée ✅
+
+📅 Date : ${date}
+⏰ Heure : ${heure}
+👥 Nombre de personnes : ${personnes}
+
+Merci de nous avoir choisi !
+  `;
+
+  // ==== Email admin complet ====
+  const emailAdmin = `
 Nouvelle réservation :
 
 👤 Nom : ${nom}
@@ -73,11 +64,14 @@ Nouvelle réservation :
 ${message}
   `;
 
-  formData.append("message-format", texteEmail);
-  formData.append("_replyto", email); // envoi du mail de confirmation au client
+  // Config Formspree
+  formData.set("_replyto", email); 
+  formData.set("_subject", "Carte Blanche | Confirmation de réservation"); 
+  formData.set("_autoresponse", emailClient); // mail client simple
+  formData.append("message-format", emailAdmin); // mail admin complet
 
   try {
-    const response = await fetch("https://formspree.io/f/xgvqellw", {
+    const response = await fetch(reservationForm.action, {
       method: "POST",
       body: formData,
       headers: { Accept: "application/json" }
@@ -94,7 +88,5 @@ ${message}
   }
 });
 
-// === FERMER LA POPUP ===
-closePopup.addEventListener("click", () => {
-  popup.style.display = "none";
-});
+// ===== FERMER POPUP =====
+closePopup.addEventListener("click", () => popup.style.display = "none");
