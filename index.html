@@ -1,13 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carte Blanche | Cuisine Méditerranéenne</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
-  <!-- Lien CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Google Fonts -->
@@ -26,7 +25,6 @@
       <li><a href="#apropos">À propos</a></li>
       <li><a href="#services">Nos Services</a></li>
       <li><a href="#commander">Commander</a></li> 
-    
       <li><a href="#reservation">Réserver</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -44,8 +42,6 @@
   <!-- ===== MENU ===== -->
   <section id="menu" class="menu">
     <h2>Nos Spécialités Méditerranéennes</h2>
-
-    <!-- Boutons de catégories -->
     <div class="menu-categories">
       <button class="menu-btn active" data-target="entrees">Entrées</button>
       <button class="menu-btn" data-target="plats">Plats</button>
@@ -54,152 +50,29 @@
       <button class="menu-btn" data-target="desserts">Desserts</button>
     </div>
 
-    <!-- Entrées -->
     <div id="entrees" class="menu-grid">
-      <div class="menu-item">
-    
-        <h3>Arancini aub parmesan</h3>
-        <p>creme de permesan affine 12 mois</p>
-        <p class="prix">8 €</p>
-
-         <h3>Veloute de butternut roti </h3>
-        <p>eclats de noisettes torrefiees</p>
-        <p class="prix">8 €</p> 
-
-         <h3>L'oeuf parfait</h3>
-        <p>creme de champignons</p>
-        <p class="prix">8 €</p>
-
-         <h3>Poelee de seiche</h3>
-        <p>seiche sautees a la persillade</p>
-        <p class="prix">12 €</p>
-      </div>
-      
+      <div class="menu-item"><img src="image/entrees.png" alt="Entrées méditerranéennes"></div>
     </div>
 
-    <!-- Plats -->
     <div id="plats" class="menu-grid hidden">
-      <div class="menu-item">
-      
-        <h3>Supreme de volaille fermier</h3>
-        <p>farci aux champignons, risotto au petit epeautre</p>
-        <p class="prix">21 €</p>
-
-        <h3>Paleron de boeuf confit 7h</h3>
-        <p> mousseline de pomme de terre et legumes de saison, jus au thym</p>
-        <p class="prix">23 €</p>
-
-        <h3>Selle d'agneau roti</h3>
-        <p>tomates sechees, pousses d'epinards, pignons de pin, polenta cremeuse, jus corse</p>
-        <p class="prix">24 €</p>
-      </div>
-      <div class="menu-item">
-       
-        <h3>La truite</h3>
-        <p>mousseline de panais, legumes de saison, beurre blanc et huile d'herbes</p>
-           <p class="prix">22 €</p>
-
-           <h3>L'arrivage du moment </h3>
-        <p>filet de poisson snacke a la plancha, ecrase de pommes de terre, wok du moment, vierge de legumes</p>
-           <p class="prix">22 €</p>
-
-           <h3>Risotto gambas</h3>
-        <p>bisque de gambas, gambas snackees a la plancha.</p>
-           <p class="prix">21 €</p>
-
-           <h3>Linguines aux palourdes</h3>
-        <p>tomates cerises, persil, ail frais et jus de coquillage</p>
-           <p class="prix">18,90 €</p>
-      </div>
+      <div class="menu-item"><img src="image/platsV.png" alt="Plats méditerranéens"></div>
+      <div class="menu-item"><img src="image/platsV2.png" alt="Plats méditerranéens"></div>
+      <div class="menu-item"><img src="image/platsP.png" alt="Plats méditerranéens"></div>
+      <div class="menu-item"><img src="image/platsP2.png" alt="Plats méditerranéens"></div>
+      <div class="menu-item"><img src="image/platsVG.png" alt="Plats méditerranéens"></div>
     </div>
 
-    <!-- Pizzas -->
     <div id="pizzas" class="menu-grid hidden">
-      <div class="menu-item">
-       
-        <h3> Black</h3>
-        <p>sauce pesto, courgettes, tomates cerises, salade, tomates séchées, fromage burrata, olives. </p>
-            <p class="prix">18 €</p>
-            
- <h3> Ricotta</h3>
-        <p>crème fraîche, mozzarella, ricotta, olives.</p>
-            <p class="prix">16 €</p>
-
-             <h3> Napolitain</h3>
-        <p>sauce tomate, mozzarella, anchois, basilic.</p>
-            <p class="prix">12 €</p>
-
-             <h3> Burrata</h3>
-        <p>sauce tomate, tomates cerises, salade, burrata, sauce pesto, fromage, olives.</p>
-            <p class="prix">15 €</p>
-
-             <h3>Thon </h3>
-        <p>sauce tomate, fromage emmental, thon confit à l’huile d’olive, oignons rouges, olives.</p>
-            <p class="prix">13,99 €</p>
-
-             <h3>4 Fromages</h3>
-        <p>sauce tomate, mozzarella, 3 fromages du moment.</p>
-            <p class="prix"></p>
-
-        
-      </div>
-      
+      <div class="menu-item"><img src="image/pizza1.png" alt="Pizzas maison"></div>
+      <div class="menu-item"><img src="image/pizza2.png" alt="Pizzas maison"></div>
     </div>
 
-    <!-- Mocktails -->
     <div id="mocktails" class="menu-grid hidden">
-      <div class="menu-item">
-        <!-- <img src="image/cocktail.jpeg" alt="Mocktail Fruits Rouges" /> -->
-        <h3>Tropicool</h3>
-        <p>Passion, orange, orgeat et citron</p>
-        <p class="prix">6 €</p>
-
-         <h3>Frambulles</h3>
-        <p>Framboise, passion, citron et Perrier</p>
-        <p class="prix">6,5 € €</p>
-
-         <h3>Sunnypac</h3>
-        <p>Orange, abricot & sirop de pac</p>
-        <p class="prix">6 €</p>
-
-         <h3>Virgin Mojito</h3>
-        <p>Menthe fraîche, citron vert, rhum 0,0 %, Perrier</p>
-        <p class="prix">7 €</p>
-
-         <h3>Virgin Basilic Smash</h3>
-        <p>Basilic frais, citron, sucre et gin 0 %</p>
-        <p class="prix">7 €</p>
-
-
-         <h3>Sirop</h3>
-        <p>Menthe – Orgeat – Pac – Pêche – Grenadine</p>
-        <p class="prix">2 €</p>
-
-      </div>
-      
+      <div class="menu-item"><img src="image/mocktails.jpg" alt="Mocktails frais"></div>
     </div>
 
-    <!-- Desserts -->
     <div id="desserts" class="menu-grid hidden">
-      <div class="menu-item">
-      
-        <h3>Poire pochée aux épices</h3>
-        <p>crème vanille de Madagascar</p>
-         <p class="prix">8 €</p>
-
-        <h3>Le baba fait maison </h3>
-        <p>crème onctueuse et soupe d’orange parfumée aux épices.</p>
-         <p class="prix">8 €</p>
-
-        <h3>Pain perdu</h3>
-        <p>crème de spéculoos</p>
-         <p class="prix">8 €</p>
-
-        <h3>Tiramisu pistache</h3>
-        <p>pistache</p>
-         <p class="prix">8 €</p>
-      </div>
-     
+      <div class="menu-item"><img src="image/desserts.png" alt="Desserts maison"></div>
     </div>
   </section>
 
@@ -234,99 +107,98 @@
     </div>
   </section>
 
-  <!-- ===== COMMANDER ===== -->
-<!-- <p>
-  <section id="commander" class="order">
-    <h2>Commandez en Ligne</h2>
-    <form class="order-form">
-      <input type="text" placeholder="Votre nom" required />
-      <input type="tel" placeholder="Téléphone" required />
-      <input type="email" placeholder="Email" required />
+  <!-- ===== RÉSERVATION ===== -->
+  <section id="reservation" class="reservation">
+    <h2>Réservez votre Table</h2>
+    <form class="reservation-form" action="https://formspree.io/f/mdaokajn" method="POST">
 
-      <label for="service">Type de commande :</label>
-      <select id="service" required>
-        <option value="">-- Sélectionnez --</option>
-        <option value="livraison">Livraison</option>
-        <option value="emporter">À emporter</option>
-      </select>
-
-      <textarea placeholder="Votre commande (plats, quantité...)" required></textarea>
-      <button type="submit" class="btn-primary">Envoyer</button>
-    </form>
-  </section>  </p> -->
-
-  <!-- ===== RESERVATION =====   -->
-<section id="reservation" class="reservation">
-   <h2>Réservez votre Table</h2>
-
-  <form class="reservation-form" action="https://formspree.io/f/mdaokajn" method="POST">
-
+      <div class="form-group">
+        <label>Nom</label>
+        <input type="text" name="nom" placeholder="Votre nom" required />
+      </div>
     
-    <input type="text" name="nom" placeholder="Votre nom" required />
-    <input type="tel" name="telephone" placeholder="Téléphone" required />
-    <input type="email" name="email" placeholder="Votre email" required />
-
-    <select name="personnes" required>
-      <option value="">Nombre de personnes</option>
-      <option>1 personne</option>
-      <option>2 personnes</option>
-      <option>3 personnes</option>
-      <option>4 personnes</option>
-      <option>5 personnes</option>
-      <option>6 personnes</option>
-      <option>7 personnes</option>
-      <option>8 personnes</option>
-    </select>
-
-    <input type="date" name="date" required />
-    <input type="time" name="heure" required />
-
-    <textarea name="message" placeholder="Message (facultatif)"></textarea>
-
-    <button type="submit" class="btn-primary">Envoyer la réservation</button>
-
-  </form>
-
-  
-</section>  
-
- 
+      <div class="form-group">
+        <label>Téléphone</label>
+        <input type="tel" name="telephone" placeholder="Téléphone" required />
+      </div>
+    
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Votre email" required />
+      </div>
+    
+      <div class="form-group">
+        <label>Personnes</label>
+        <select name="personnes" required>
+          <option value="">Nombre de personnes</option>
+          <option>1 personne</option>
+          <option>2 personnes</option>
+          <option>3 personnes</option>
+          <option>4 personnes</option>
+          <option>5 personnes</option>
+          <option>6 personnes</option>
+          <option>7 personnes</option>
+          <option>8 personnes</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" name="date" required />
+      </div>
+    
+      <div class="form-group">
+        <label>Heure</label>
+        <input type="time" name="heure" required />
+      </div>
+    
+      <div class="form-group full">
+        <label>Message</label>
+        <textarea name="message" placeholder="Message (facultatif)"></textarea>
+      </div>
+    
+      <button type="submit" class="btn-primary btn-form">
+        Réserver maintenant
+      </button>
+    
+    </form>
+    
+  </section>
 
   <!-- ===== POPUP ===== -->
   <div class="popup">
     <div class="popup-content">
       <h3>✅ Réservation envoyée avec succès !</h3>
-      <p>Nous vous contacterons très bientôt.</p>
+      <p>Merci a très bientôt.</p>
       <button class="btn-primary close-popup">Fermer</button>
     </div>
   </div>
 
   <!-- ===== CONTACT ===== -->
- <section id="contact" class="contact"> <h2>Contact & Informations</h2> 
-<div class="contact-info">
-  <p>
-    <strong>Adresse :</strong>
-    <a href="https://www.google.com/maps?q=91+Rue+de+la+République,+13002+Marseille" target="_blank">
-      91 Rue de la République, 13002 Marseille
-    </a>
-  </p>
-</div>
-
-    <p><strong>Téléphone :</strong> 
-      <a href="tel:+33769016878">04 91 52 74 80</a></p> 
-     
-      <p><strong>Email :</strong> <a href="mailto:contact@carteblanche.fr">restaurant@crtblanche.com</a></p> 
-      <p><strong>Horaires :</strong> Lundi - Dimanche : 08h00 - 23h00</p> </div> 
-      <div class="socials"> <a href="#"><i class="fab fa-facebook"></i></a> 
-        <a href="https://www.instagram.com/carteblanche_marseille/"><i class="fab fa-instagram"></i></a>
-         <a href="#"><i class="fab fa-tiktok"></i></a> 
-        </div> 
-      </section>
+  <section id="contact" class="contact">
+    <h2>Contact & Informations</h2>
+    <div class="contact-info">
+      <p><strong>Adresse :</strong> 
+        <a href="https://www.google.com/maps?q=91+Rue+de+la+République,+13002+Marseille" target="_blank">
+          91 Rue de la République, 13002 Marseille
+        </a>
+      </p>
+      <p><strong>Téléphone :</strong> <a href="tel:+33769016878">04 91 52 74 80</a></p>
+      <p><strong>Email :</strong> <a href="mailto:contact@carteblanche.fr">restaurant@crtblanche.com</a></p>
+      <p><strong>Horaires :</strong> Lundi - Dimanche : 08h00 - 23h00</p>
+    </div>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/carteblanche_marseille/"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Carte Blanche | Tous droits réservés</p>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
