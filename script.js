@@ -88,5 +88,34 @@ ${message}
   }
 });
 
-// ===== FERMER POPUP =====
-closePopup.addEventListener("click", () => popup.style.display = "none");
+document.addEventListener("DOMContentLoaded", () => {
+
+  // ===== POPUP =====
+  const popup = document.querySelector(".popup");
+  const closePopup = document.querySelector(".close-popup");
+
+  if (popup) popup.style.display = "none";
+
+  if (closePopup) {
+    closePopup.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+  }
+
+  // ===== BLOQUER LE 7 FÉVRIER 2026 =====
+  const dateInput = document.querySelector('input[type="date"]');
+
+  const blockedDate = "2026-02-07";
+
+  if (dateInput) {
+    dateInput.addEventListener("input", () => {
+      if (dateInput.value === blockedDate) {
+        alert("❌ Les réservations ne sont pas disponibles le 7 février 2026. Merci de choisir une autre date.");
+        dateInput.value = "";
+      }
+    });
+  }
+
+});
+
+
